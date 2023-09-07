@@ -1,0 +1,38 @@
+{
+  "name": "Hacka-Wordle",
+  "description": "This extension helps you with learning words on Wordle site.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "./icons/192x192.png",
+    "48": "./icons/192x192.png",
+    "128": "./icons/192x192.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "windows"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nytimes.com/games/wordle/*"
+      ],
+      "js": [
+        "./dist/assets/content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "./dist/popup/index.html",
+    "default_icon": {
+      "16": "./icons/192x192.png",
+      "48": "./icons/192x192.png",
+      "128": "./icons/192x192.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
