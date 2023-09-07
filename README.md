@@ -1,4 +1,4 @@
-# Hacka-Wordle
+# Word Puzzle
 
 <div align="center">
 
